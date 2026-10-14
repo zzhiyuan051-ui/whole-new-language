@@ -1,0 +1,77 @@
+{
+  "sources": {
+    "pua_map_rows": 15000,
+    "pua_map_status": {
+      "defined": 3000,
+      "reserved": 12000
+    },
+    "pua_map_classes": 45,
+    "pua_map_class_top": {
+      "本体": 341,
+      "数量": 341,
+      "空间": 341,
+      "时间": 341,
+      "运动": 341,
+      "身体": 341,
+      "心灵": 341,
+      "社会": 341
+    },
+    "crosscheck": {
+      "csv_codepoints": 3000,
+      "font_codepoints": 3000,
+      "only_in_font": 0,
+      "only_in_csv": 0,
+      "consistent": true,
+      "only_in_font_sample": [],
+      "only_in_csv_sample": []
+    }
+  },
+  "font": {
+    "path": "huiwen/font/GalHuiwen.ttf",
+    "size_bytes": 2045412,
+    "sfnt_version": "\u0000\u0001\u0000\u0000",
+    "num_glyphs": 3001,
+    "units_per_em": 1000,
+    "tables": [
+      "GlyphOrder",
+      "OS/2",
+      "cmap",
+      "glyf",
+      "head",
+      "hhea",
+      "hmtx",
+      "loca",
+      "ltag",
+      "maxp",
+      "name",
+      "post"
+    ],
+    "family": "GalHuiwen",
+    "subfamily": "Regular",
+    "full_name": "GalHuiwen Regular",
+    "version": "Version 1.0",
+    "postscript_name": "GalHuiwen-Regular"
+  },
+  "codepoints": {
+    "total_mapped": 3000,
+    "min": "U+E000",
+    "max": "U+EBB7",
+    "by_block": {
+      "Private Use Area": 3000
+    },
+    "pua_bmp_count": 3000,
+    "pua_bmp_span": "U+E000–U+EBB7",
+    "pua_bmp_used_ratio": 0.4688,
+    "non_pua_count": 0,
+    "non_pua_samples": [],
+    "pua_runs": [
+      {
+        "start": "U+E000",
+        "end": "U+EBB7",
+        "count": 3000
+      }
+    ],
+    "pua_run_count": 1
+  },
+  "lexicon": {}
+}

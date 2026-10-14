@@ -1,0 +1,9 @@
+; 洄文输入法 · TSF 文本服务导出表
+; 这五个是 COM 进程内服务器 + TSF 文本服务要求的导出。
+LIBRARY huiwen_ime
+
+EXPORTS
+    DllGetClassObject   PRIVATE
+    DllCanUnloadNow     PRIVATE
+    DllRegisterServer   PRIVATE
+    DllUnregisterServer PRIVATE

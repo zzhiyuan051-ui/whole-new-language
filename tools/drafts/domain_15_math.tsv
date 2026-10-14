@@ -1,0 +1,24 @@
+ta4	集合	set	n	同类事物汇成的整体	a whole of gathered things
+te4	元素	element	n	构成集合的个体	an individual that belongs to a set
+ti4	子集	subset	n	全含于另一集合的集合	a set contained in another set
+to4	映射	map	n	两集合间元素的确定对应	a definite correspondence between two sets
+toe4	函	function	n	每个输入给唯一输出的对应	a rule giving one output per input
+tu4	序列	sequence	n	按次序排开的一列	a row arranged in order
+ty4	级数	series	n	序列各项累加之和	the sum of the terms of a sequence
+tv4	方程	equation	n	含未知量的相等式	a statement that two sides are equal
+da4	解	solution	n	使方程成立的那个值	the value that makes an equation true
+de4	双射	bijection	n	既单又满的对应	a correspondence both one-to-one and onto
+di4	关系	relation	n	元素之间的联系方式	a way elements are linked
+do4	序关系	ordering	n	先后轻重的排列	the arrangement of first and last
+doe4	证明	proof	n	由前提推出结论的链	a chain from premises to conclusion
+du4	公理	axiom	n	不加证明而假定的命题	a proposition assumed without proof
+dy4	定理	theorem	n	由公理证得的命题	a proposition proved from axioms
+dv4	悖论	paradox	n	自相矛盾的推理结论	a conclusion that contradicts itself
+ka4	对称	symmetry	n	变换后形状不变	the shape stays the same after change
+ke4	随机	random	a	结果不可事先确定	not fixed before it happens
+ki4	维度	dimension	n	独立方向的数目	the number of independent directions
+ko4	有限	finite	a	元素个数可数的	having a countable number of elements
+koe4	无限	infinite	a	没有穷尽的	having no end or bound
+ku4	极限	limit	n	趋近而永不到达的值	a value approached but never reached
+ky4	连续	continuous	a	中途没有断点的	having no break in between
+kv4	置换	permutation	n	重排一列元素的次序	the act of rearranging elements in order

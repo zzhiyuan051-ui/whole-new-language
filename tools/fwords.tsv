@@ -1,0 +1,32 @@
+ya6	此	this	prt	近指，指说话人近旁者	near deixis: the one close to the speaker
+ye6	彼	that	prt	远指，指远离说话人者	far deixis: the one away from the speaker
+yi6	我	I	prt	说话人自己	the speaker
+yo6	你	you	prt	听话人	the addressee
+yoe6	他	he	prt	第三个人	the third person
+yu6	它	it	prt	非人的第三方	a non-human third party
+yy6	此之	here	prt	此处此时	this place and time
+yv6	自	self	prt	回指主结自身	reflexive: the main node itself
+pa6	彼之	there	prt	彼处彼时	that place and time
+pe6	别	other	prt	不是此也不是彼者	neither this nor that
+pi6	另	another	prt	此外的又一个	one more besides
+po6	各	each	prt	逐一而指	one by one
+poe6	诸	all	prt	全部加在一起	all taken together
+pu6	些	some	prt	不确定的一部分	an indefinite part
+py6	一	one	num	数目一	the number one
+pv6	二	two	num	数目二	the number two
+ba6	三	three	num	数目三	the number three
+be6	几	how many	num	问数目	asking a number
+bi6	谁	who	q	问施事者	asking the agent
+bo6	何	what	q	问事物	asking a thing
+boe6	何处	where	q	问处所	asking a place
+bu6	何时	when	q	问时间	asking a time
+by6	为何	why	q	问原因	asking a reason
+bv6	如何	how	q	问方式	asking a manner
+ta6	疑	INT	q	疑问语气，罩住整图	interrogative mood over the whole graph
+te6	毋	NEG	q	否定语气，罩住整图	negative mood over the whole graph
+ti6	请	IMP	q	祈使语气，罩住整图	imperative mood over the whole graph
+to6	亲见	see	prt	义标：说话人亲眼所见	evidential: seen by the speaker
+toe6	亲闻	hear	prt	义标：亲耳所闻	evidential: heard by the speaker
+tu6	推知	infer	prt	义标：由痕迹推断	evidential: inferred from traces
+ty6	闻者	hearsay	prt	义标：听别人说	evidential: reported by others
+tv6	想者	imagine	prt	义标：虚构、设想	evidential: imagined or supposed

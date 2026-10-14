@@ -1,0 +1,19 @@
+洄文输入法 · 自检　（打包模式：False）
+数据目录：C:\Users\Lenovo\Documents\deepseek-harness\default-workspace\huiwen
+产物目录：C:\Users\Lenovo\Documents\deepseek-harness\default-workspace\huiwen\ime\output
+
+[通过] 数据文件存在：词表 lexicon.tsv　499 KB
+[通过] 数据文件存在：字符表 characters.json　4518 KB
+[通过] 数据文件存在：音节表 syllabary.tsv　15 KB
+[通过] 数据文件存在：字体 GalHuiwen.ttf　1997 KB
+[通过] 词表 3000 条　3000
+[通过] 音节 624 个　624
+[通过] 输入 za3 首选「爱」　爱
+[通过] 上屏「我爱你」码位与引擎一致　U+E14C U+E3F5 U+E409
+[通过] 上屏码位全在 BMP 私用区内（GDI 的前提）　U+E14C..U+E409
+[通过] 导出 PNG 成功　16 KB
+[通过] 导出 SVG（内嵌子集字体）成功　3 KB
+[通过] 汉字反查「雨具」
+[通过] 前缀补全「za」出多个候选　9 个
+
+自检全部通过。

@@ -1,0 +1,73 @@
+# ---------------------------------------------------------------
+# 洄文 · 公开仓库忽略规则
+# ---------------------------------------------------------------
+
+# ---- 构建与打包产物（体积大、可复现，不进版本库）----
+# dist/ 实测 219 MB / 2090 个文件，全部是 PyInstaller 打出来的运行库
+dist/
+build/
+*.spec
+
+# ---- 编译中间产物 ----
+*.obj
+*.exp
+*.lib
+*.pdb
+*.ilk
+tsf/out/
+hook/out/
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ---- 工具生成的中间报告（可复算，但体积或变动频繁）----
+# 注意：tools/out/ 里的**码表与审计报告是提案材料**，需要入库，
+# 所以不整体忽略，只忽略临时件。
+tools/out/*.tmp
+tools/_*.txt
+tools/*_result.txt
+tsf/_*.py
+tsf/_*.txt
+tsf/*_result.txt
+tsf/register_trace.txt
+tsf/restore_trace.txt
+hook/*_result.txt
+hook/_*.txt
+hook/_*.py
+
+# ---- 中间提取物 ----
+# 从 .doc/.docx 抽出的原始文本，是生成全书时的中间产物，可复算
+dict/_docx_extract.txt
+dict/_*.txt
+
+# ---- 编辑器与系统 ----
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- 字体备份（工具打补丁时会生成，属临时件）----
+font/*.ttf.bak
+font/*.ttf.orig-backup
+font/*.bak
+
+# ---- git 操作临时件 ----
+.git-commit-msg.tmp
+
+# ---- 个人环境相关，不应公开 ----
+# 内含本机绝对路径与个人会话信息
+tools/qq_fonts.txt
+tsf/_installed_path.txt

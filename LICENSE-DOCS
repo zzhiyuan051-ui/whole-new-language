@@ -1,0 +1,76 @@
+# 文档与数据许可 · Creative Commons Attribution 4.0 International
+
+本仓库中的**文档、规范、教材、词典数据与字符集数据**采用
+**知识共享署名 4.0 国际许可协议（CC BY 4.0）**。
+
+你可以自由地：
+
+- **共享** —— 以任何媒介或格式复制、发行本作品
+- **演绎** —— 修改、转换或以本作品为基础进行创作，甚至用于商业目的
+
+惟须遵守以下条件：
+
+- **署名** —— 必须给出适当的署名，提供指向本许可协议的链接，
+  并**指明是否作出了修改**。你可以用任何合理的方式署名，
+  但不得以任何方式暗示许可人认可你或你的使用。
+
+无附加限制 —— 你不得适用法律条款或技术措施，
+从而限制他人做许可协议允许的事。
+
+---
+
+## 本许可涵盖的内容
+
+| 路径 | 内容 |
+|---|---|
+| `spec/` | 规范四份（文字学 / 语法 / 音系 / 词法） |
+| `course/` | 《洄文入门》五编二十课 |
+| `dict/` | 《洄文大字典》与全部词条 |
+| `docs/` | 推广方案、Unicode 提案草案等技术文档 |
+| `lexicon.tsv` `.json` | 词表（3,000 条） |
+| `characters.tsv` `.json` | 字符总表（15,000 字） |
+| `dictionary.md` | 人读词典 |
+| `lexicon-cheatsheet.md` | 速查表 |
+| `texts/` | 范文（`.hw` 源、`.svg`、`.png`） |
+| `charts/` | 字表（125 页 + 分类表） |
+| `tools/out/` | 由工具生成的审计报告与码表 |
+
+## 本许可**不**涵盖的内容
+
+| 路径 | 实际许可 |
+|---|---|
+| `font/*.ttf` `font/*.ico` `font/subset.ttf` | **SIL OFL 1.1** —— 见 [LICENSE-FONT](LICENSE-FONT) |
+| `tools/` `ime/` `tsf/` `hook/` 中的源代码 | **MIT** —— 见 [LICENSE](LICENSE) |
+
+---
+
+## 建议的署名写法
+
+在论文、网站、产品等处引用洄文时，推荐写法：
+
+```
+洄文（Huiwen），The Huiwen Project，CC BY 4.0
+https://github.com/<your-repo>
+```
+
+若你修改过内容，请注明，例如：
+
+```
+基于《洄文入门》修改，原作品：The Huiwen Project，CC BY 4.0
+```
+
+---
+
+## 关于「洄文」这个名字
+
+**「洄文 / Huiwen」作为书写系统的名称不受本许可限制。**
+CC BY 4.0 覆盖的是文档与数据的著作权，不涉及名称本身。
+任何人都可以描述、讨论、教学、实现洄文，无需事先取得许可。
+
+字体文件的名称（`GalHuiwen`）另受 OFL 的 Reserved Font Name 机制约束，
+详见 [LICENSE-FONT](LICENSE-FONT)。
+
+---
+
+许可全文：<https://creativecommons.org/licenses/by/4.0/legalcode.zh-Hans>
+许可摘要：<https://creativecommons.org/licenses/by/4.0/deed.zh-Hans>
