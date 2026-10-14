@@ -136,22 +136,25 @@ TOKEN = re.compile(r"(\*\*.+?\*\*|`[^`]+`|(?<![\w*])\*[^*\n]+?\*(?![\w*]))")
 
 
 def add_inline(p, text: str, *, size=10.5, ea=EA_BODY, latin=LATIN_BODY,
-               base_bold=False) -> None:
+               base_bold=False, color=INK) -> None:
     """把一行里的 **粗体** / `代码` / *斜体* 拆成多个 run。"""
     for part in TOKEN.split(text):
         if not part:
             continue
         if part.startswith("**") and part.endswith("**") and len(part) > 4:
-            set_font(p.add_run(part[2:-2]), size=size, ea=ea, latin=latin, bold=True)
+            set_font(p.add_run(part[2:-2]), size=size, ea=ea, latin=latin,
+                     bold=True, color=color)
         elif part.startswith("`") and part.endswith("`") and len(part) > 2:
             r = p.add_run(part[1:-1])
             set_font(r, size=size - 0.5, ea=MONO, latin=MONO,
                      color=RGBColor(0x9B, 0x2C, 0x2C))
         elif (part.startswith("*") and part.endswith("*") and len(part) > 2
               and not part.startswith("**")):
-            set_font(p.add_run(part[1:-1]), size=size, ea=ea, latin=latin, italic=True)
+            set_font(p.add_run(part[1:-1]), size=size, ea=ea, latin=latin,
+                     italic=True, color=color)
         else:
-            set_font(p.add_run(part), size=size, ea=ea, latin=latin, bold=base_bold)
+            set_font(p.add_run(part), size=size, ea=ea, latin=latin,
+                     bold=base_bold, color=color)
 
 
 # ================================================================ 样式
@@ -272,7 +275,15 @@ def convert() -> dict:
 
     i = 0
     n = len(lines)
+    last_i = -1
     while i < n:
+        # 防死循环：每个分支都必须让 i 前进。漏掉一处（水平线分支就漏过）
+        # 就会无限新建空段落 —— 表现是"跑 19 分钟没完、内存涨到几百 MB"，
+        # 极难从表象看出来。这里直接快失败。
+        if i == last_i:
+            raise RuntimeError(
+                f"死循环：第 {i} 行没有前进 -> {lines[i][:80]!r}")
+        last_i = i
         raw = lines[i]
         s = raw.rstrip()
 
@@ -350,6 +361,7 @@ def convert() -> dict:
             p.paragraph_format.space_before = Pt(6)
             p.paragraph_format.space_after = Pt(8)
             para_border(p, bottom={"sz": 6, "color": "D8DCE3", "space": 1})
+            i += 1                     # ← 别忘了它！漏掉就是死循环（真踩过）
             continue
 
         # —— 标题 ——
