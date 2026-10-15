@@ -72,6 +72,12 @@ font/*.bak
 tools/qq_fonts.txt
 tsf/_installed_path.txt
 
-# ---- 内部文档：不公开（策略、商业计划、话术）----
+# ---- 鍐呴儴鏂囨。锛氫笉鍏紑锛堢瓥鐣ャ�佸晢涓氳鍒掋�佽瘽鏈級----
 _internal/
 
+
+# ---- 鏂囨。鐢熸垚鐨勪腑闂翠欢 ----
+dict/*.docx.bak
+dict/_鏃х増澶囦唤.docx
+dict/_*.txt
+dict/_*.png
