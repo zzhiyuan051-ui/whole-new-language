@@ -1,8 +1,8 @@
 ﻿# 洄文输入法 · TSF 文本服务编译脚本
 #
 # 用法（在仓库根目录）：
-#     pwsh huiwen/tsf/build.ps1
-# 产物：huiwen/tsf/out/huiwen_ime.dll
+#     pwsh tsf/build.ps1
+# 产物：tsf/out/huiwen_ime.dll
 #
 # 为什么要用 vcvars64：cl.exe 依赖一堆环境变量（INCLUDE/LIB/PATH），
 # 单独调 cl.exe 会因为找不到标准头文件而失败。

@@ -5,7 +5,7 @@
 [通过] 数据文件存在：词表 lexicon.tsv　499 KB
 [通过] 数据文件存在：字符表 characters.json　4518 KB
 [通过] 数据文件存在：音节表 syllabary.tsv　15 KB
-[通过] 数据文件存在：字体 GalHuiwen.ttf　1997 KB
+[通过] 数据文件存在：字体 GalHuiwen.ttf　1998 KB
 [通过] 词表 3000 条　3000
 [通过] 音节 624 个　624
 [通过] 输入 za3 首选「爱」　爱

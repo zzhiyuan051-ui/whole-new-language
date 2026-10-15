@@ -16,10 +16,10 @@
   这是权威答案，不依赖任何缓存。
 
 用法：
-    python huiwen/tools/hwfontinstall.py probe       # 只诊断，不改任何东西
-    python huiwen/tools/hwfontinstall.py install     # 用户级安装
-    python huiwen/tools/hwfontinstall.py verify      # GDI 验证
-    python huiwen/tools/hwfontinstall.py uninstall   # 卸载
+    python tools/hwfontinstall.py probe       # 只诊断，不改任何东西
+    python tools/hwfontinstall.py install     # 用户级安装
+    python tools/hwfontinstall.py verify      # GDI 验证
+    python tools/hwfontinstall.py uninstall   # 卸载
 """
 from __future__ import annotations
 

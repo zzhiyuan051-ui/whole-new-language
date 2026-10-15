@@ -50,7 +50,7 @@ def hresult_name(hr: int) -> str:
 
 def _load_dll(path: Path):
     if not path.exists():
-        raise SystemExit(f"找不到 DLL：{path}\n先运行：powershell -File huiwen/tsf/build.ps1")
+        raise SystemExit(f"找不到 DLL：{path}\n先运行：powershell -File tsf/build.ps1")
     try:
         return ctypes.WinDLL(str(path))
     except OSError as e:
@@ -64,7 +64,7 @@ def cmd_install() -> int:
     if not DLL_SRC.exists():
         raise SystemExit(f"找不到编译产物：{DLL_SRC}\n"
                          f"先编译：powershell -NoProfile -ExecutionPolicy Bypass "
-                         f"-File huiwen/tsf/build.ps1")
+                         f"-File tsf/build.ps1")
 
     INSTALL_DIR.mkdir(parents=True, exist_ok=True)
     shutil.copy2(DLL_SRC, DLL_DST)

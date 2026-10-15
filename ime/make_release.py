@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 """把输入法打包成一个可下载的发布包。
 
-输入：huiwen/dist/洄文输入法/（PyInstaller onedir 的产物）
-输出：huiwen/dist/洄文输入法-<版本>-win64.zip
+输入：dist/洄文输入法/（PyInstaller onedir 的产物）
+输出：dist/洄文输入法-<版本>-win64.zip
 
 包里放：程序本体 + 使用说明 + 独立字体文件 + 界面截图。
 独立字体是给「想让别的程序也能显示洄文」的用户准备的（自己双击安装）。

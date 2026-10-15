@@ -6,13 +6,13 @@
 机构看的，填错码位等于自毁提案。所以本脚本以 cmap 为准，只从 characters.tsv
 补齐「这个码位是什么字」的人文信息，并显式报告两边对不上的地方。
 
-产物（全部落 huiwen/tools/out/）：
+产物（全部落 tools/out/）：
   codepoints.csv   码位主表，一行一码位（给程序、给提案附录）
   codepoints.md    人读码表（按语义类分组）
   codepoints.json  机器可读汇总
 
 用法：
-  python huiwen/tools/codepoint_table.py
+  python tools/codepoint_table.py
 """
 from __future__ import annotations
 
@@ -125,7 +125,7 @@ def main() -> int:
     classes_in_font = {_cno(r) for r in records} - {None}
     classes_all = {_cno(r) for r in ch_rows} - {None}
     summary = {
-        "font": str(FONT.relative_to(ROOT.parent)).replace("\\", "/"),
+        "font": str(FONT.relative_to(ROOT)).replace("\\", "/"),
         "font_full_name": font["name"].getDebugName(4),
         "total_codepoints": len(font_cps),
         "range": {"first": f"U+{font_cps[0]:04X}", "last": f"U+{font_cps[-1]:04X}"}
@@ -170,7 +170,7 @@ def main() -> int:
     L.append("# 洄文码位表（Code Point Table）\n")
     L.append(f"> 数据源：`{summary['font']}` 的 `cmap` 表，"
              f"字体名 **{summary['font_full_name']}**。")
-    L.append("> 生成脚本：`huiwen/tools/codepoint_table.py`（可复算）。\n")
+    L.append("> 生成脚本：`tools/codepoint_table.py`（可复算）。\n")
     L.append("## 一、总览\n")
     L.append("| 项 | 值 |")
     L.append("|---|---|")

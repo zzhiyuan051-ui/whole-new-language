@@ -1,0 +1,16 @@
+# 洄文仓库依赖
+#
+# 安装：pip install -r requirements.txt
+#
+# 分支说明：真正常用的只有下面两个第三方库。
+# tkinter 是 Python 标准库（Windows 官方安装包自带），不在 pip 里。
+
+# ---- 输入法（ime/）与字形渲染 ----
+pillow>=10.0          # PIL：把字形渲染成位图、导出 PNG
+fonttools>=4.40       # 读 TTF 的 cmap/name 表、生成子集字体
+
+# ---- 词表 / 字典 / 全书生成（tools/hwbook.py 出 DOCX）----
+python-docx>=1.0      # 生成《洄文大字典》.docx
+
+# ---- 打包成独立 exe（仅发布时用，普通使用不需要）----
+# pyinstaller>=6.0

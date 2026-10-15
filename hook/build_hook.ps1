@@ -1,6 +1,6 @@
 ﻿# 编译洄文输入法（钩子版，免管理员）
 #
-#     powershell -NoProfile -ExecutionPolicy Bypass -File huiwen/hook/build_hook.ps1
+#     powershell -NoProfile -ExecutionPolicy Bypass -File hook/build_hook.ps1
 
 $ErrorActionPreference = 'Stop'
 

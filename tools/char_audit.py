@@ -13,7 +13,7 @@
   out/char_audit.md     人读报告
 
 用法：
-  python huiwen/tools/char_audit.py
+  python tools/char_audit.py
 """
 from __future__ import annotations
 
@@ -76,7 +76,9 @@ def main() -> int:
     if not FONT.exists():
         sys.exit(f"找不到字体：{FONT}")
     font = TTFont(str(FONT), lazy=True)
-    report["font"]["path"] = str(FONT.relative_to(ROOT.parent)).replace("\\", "/")
+    # 用 relative_to(ROOT)：克隆下来后 huiwen/ 就是仓库根，
+    # 所以报告里应该是 font/GalHuiwen.ttf 而不是 font/GalHuiwen.ttf
+    report["font"]["path"] = str(FONT.relative_to(ROOT)).replace("\\", "/")
     report["font"]["size_bytes"] = FONT.stat().st_size
     report["font"]["sfnt_version"] = font.sfntVersion
     report["font"]["num_glyphs"] = font["maxp"].numGlyphs
@@ -192,7 +194,7 @@ def main() -> int:
     c = report["codepoints"]
     L: list[str] = []
     L.append("# 洄文字符集现状审计\n")
-    L.append("> 由 `huiwen/tools/char_audit.py` 直接解析字体文件生成，非人工填写。\n")
+    L.append("> 由 `tools/char_audit.py` 直接解析字体文件生成，非人工填写。\n")
     L.append("## 一、字体文件\n")
     L.append("| 项 | 值 |")
     L.append("|---|---|")

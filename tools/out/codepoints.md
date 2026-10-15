@@ -1,7 +1,7 @@
 # 洄文码位表（Code Point Table）
 
-> 数据源：`huiwen/font/GalHuiwen.ttf` 的 `cmap` 表，字体名 **GalHuiwen Regular**。
-> 生成脚本：`huiwen/tools/codepoint_table.py`（可复算）。
+> 数据源：`font/GalHuiwen.ttf` 的 `cmap` 表，字体名 **GalHuiwen Regular**。
+> 生成脚本：`tools/codepoint_table.py`（可复算）。
 
 ## 一、总览
 

@@ -137,12 +137,12 @@ COM 部分已经验证；装上之后能否打字，需要你实际敲一下确�
 
 - 编译需要 Visual Studio Build Tools（含 C++ 工作负载），本机已装 VS 2022 BuildTools
 - 编译脚本会自动找 `vcvars64.bat`
-- 数据表由 `huiwen/tools/hwmake_tsf_data.py` 从 `lexicon.tsv` 生成（改了词表要重跑）
+- 数据表由 `tools/hwmake_tsf_data.py` 从 `lexicon.tsv` 生成（改了词表要重跑）
 
 ```powershell
 # 编译两个版本
-python huiwen/tools/hwmake_tsf_data.py                                    # 重生成数据表
-powershell -NoProfile -ExecutionPolicy Bypass -File huiwen/tsf/build.ps1   # TSF dll
-powershell -NoProfile -ExecutionPolicy Bypass -File huiwen/tsf/build_tool.ps1  # 诊断工具
-powershell -NoProfile -ExecutionPolicy Bypass -File huiwen/hook/build_hook.ps1 # 钩子版
+python tools/hwmake_tsf_data.py                                    # 重生成数据表
+powershell -NoProfile -ExecutionPolicy Bypass -File tsf/build.ps1   # TSF dll
+powershell -NoProfile -ExecutionPolicy Bypass -File tsf/build_tool.ps1  # 诊断工具
+powershell -NoProfile -ExecutionPolicy Bypass -File hook/build_hook.ps1 # 钩子版
 ```

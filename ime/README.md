@@ -98,15 +98,17 @@ for personal use area codepoints」），所以**对方装不装字体都没用*
 
 ### 源码版
 
+以下命令都在**仓库根目录**执行（克隆下来后，`ime/` 就在根目录下）。
+
 ```powershell
-# 需要 Python 3.10+ 和两个库
-pip install pillow fonttools
+# 需要 Python 3.10+ 和两个第三方库
+pip install -r requirements.txt      # 或：pip install pillow fonttools
 
 # 直接跑
-python huiwen/ime/app.py
+python ime/app.py
 
 # 无界面自检（验证数据、引擎、导出都正常）
-python huiwen/ime/selftest.py
+python ime/selftest.py
 ```
 
 ### 自己重新打包 exe
@@ -114,21 +116,25 @@ python huiwen/ime/selftest.py
 **必须用 `--onedir`，不要用 `--onefile`。** 原因见下面「打包踩到的两个坑」。
 
 ```powershell
-$ws = (Get-Location).Path
+# 先装 PyInstaller（只有打包时需要）
+pip install pyinstaller
+
+$ws = (Get-Location).Path     # 仓库根目录
+
 python -m PyInstaller --noconfirm --clean --onedir --windowed `
   --name "洄文输入法" `
-  --icon "$ws\huiwen\font\GalHuiwen.ico" `
-  --distpath "$ws\huiwen\dist" --workpath "$ws\huiwen\build" --specpath "$ws\huiwen\build" `
-  --add-data "$ws\huiwen\lexicon.tsv;." `
-  --add-data "$ws\huiwen\characters.json;." `
-  --add-data "$ws\huiwen\tools\syllabary.tsv;tools" `
-  --add-data "$ws\huiwen\font\GalHuiwen.ttf;font" `
+  --icon "$ws\font\GalHuiwen.ico" `
+  --distpath "$ws\dist" --workpath "$ws\build" --specpath "$ws\build" `
+  --add-data "$ws\lexicon.tsv;." `
+  --add-data "$ws\characters.json;." `
+  --add-data "$ws\tools\syllabary.tsv;tools" `
+  --add-data "$ws\font\GalHuiwen.ttf;font" `
   --hidden-import fontTools.subset --hidden-import fontTools.ttLib `
   --hidden-import PIL._tkinter_finder `
-  "$ws\huiwen\ime\app.py"
+  "$ws\ime\app.py"
 
 # 打包后打发布包（zip）
-python huiwen/ime/make_release.py
+python ime/make_release.py
 ```
 
 ### 打包踩到的两个坑
@@ -178,8 +184,8 @@ python huiwen/ime/make_release.py
 | `--screenshot` | 真建窗口、自动打字上屏、截一张界面图、退出 |
 
 ```powershell
-python huiwen/ime/app.py --selftest      # 验证功能
-python huiwen/ime/app.py --screenshot    # 验证界面长什么样
+python ime/app.py --selftest      # 验证功能
+python ime/app.py --screenshot    # 验证界面长什么样
 ```
 
 后两个模式是给自动化用的 —— GUI 进程会占住输出管道，裸启动会「挂住」。
@@ -196,8 +202,8 @@ python huiwen/ime/app.py --screenshot    # 验证界面长什么样
 安装与验证：
 
 ```powershell
-python huiwen/tools/hwfontinstall.py install
-python huiwen/tools/hwfontinstall.py verify
+python tools/hwfontinstall.py install
+python tools/hwfontinstall.py verify
 ```
 
 ---

@@ -142,10 +142,10 @@ def main() -> int:
             fails.append(label)
 
     if not HOOK_EXE.exists():
-        print(f"找不到输入法程序：{HOOK_EXE}\n先运行 huiwen/hook/build_hook.ps1")
+        print(f"找不到输入法程序：{HOOK_EXE}\n先运行 hook/build_hook.ps1")
         return 1
     if not TARGET_EXE.exists():
-        print(f"找不到测试靶子：{TARGET_EXE}\n先运行 huiwen/hook/build_target.ps1")
+        print(f"找不到测试靶子：{TARGET_EXE}\n先运行 hook/build_target.ps1")
         return 1
 
     if OUT_FILE.exists():

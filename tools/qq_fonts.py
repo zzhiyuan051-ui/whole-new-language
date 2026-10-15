@@ -11,8 +11,8 @@
      而在 `app.asar.unpacked/` 目录里。第一版没过滤它，读到的是垃圾。
 
 用法：
-  python huiwen/tools/qq_fonts.py                      # 自动找已安装的 QQ
-  python huiwen/tools/qq_fonts.py --qq "D:\\QQNT\\..."  # 指定 resources/app 目录
+  python tools/qq_fonts.py                      # 自动找已安装的 QQ
+  python tools/qq_fonts.py --qq "D:\\QQNT\\..."  # 指定 resources/app 目录
 """
 from __future__ import annotations
 

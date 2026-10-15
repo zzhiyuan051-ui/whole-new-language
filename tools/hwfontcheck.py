@@ -66,4 +66,4 @@ for k, c in enumerate(picked):
     dd.text((col * tile + tile // 2, r * tile + tile - 22), str(c.get("zh", "")),
             font=lbl, fill="#888", anchor="ma")
 canvas.save(ROOT / "ime" / "_font_grid.png")
-print(f"→ 样张 huiwen/ime/_font_grid.png（{grid}×{grid} = {len(picked)} 字）")
+print(f"→ 样张 ime/_font_grid.png（{grid}×{grid} = {len(picked)} 字）")

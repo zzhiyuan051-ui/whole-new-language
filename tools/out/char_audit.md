@@ -1,13 +1,13 @@
 # 洄文字符集现状审计
 
-> 由 `huiwen/tools/char_audit.py` 直接解析字体文件生成，非人工填写。
+> 由 `tools/char_audit.py` 直接解析字体文件生成，非人工填写。
 
 ## 一、字体文件
 
 | 项 | 值 |
 |---|---|
-| 文件 | `huiwen/font/GalHuiwen.ttf` |
-| 大小 | 2,045,412 字节 |
+| 文件 | `font/GalHuiwen.ttf` |
+| 大小 | 2,045,992 字节 |
 | 字体名 | GalHuiwen / GalHuiwen Regular |
 | 版本 | Version 1.0 |
 | PostScript 名 | GalHuiwen-Regular |

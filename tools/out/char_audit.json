@@ -27,8 +27,8 @@
     }
   },
   "font": {
-    "path": "huiwen/font/GalHuiwen.ttf",
-    "size_bytes": 2045412,
+    "path": "font/GalHuiwen.ttf",
+    "size_bytes": 2045992,
     "sfnt_version": "\u0000\u0001\u0000\u0000",
     "num_glyphs": 3001,
     "units_per_em": 1000,

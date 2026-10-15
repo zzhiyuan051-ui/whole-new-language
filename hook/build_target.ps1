@@ -1,6 +1,6 @@
 ﻿# 编译测试靶子
 #
-#     powershell -NoProfile -ExecutionPolicy Bypass -File huiwen/hook/build_target.ps1
+#     powershell -NoProfile -ExecutionPolicy Bypass -File hook/build_target.ps1
 
 $ErrorActionPreference = 'Stop'
 

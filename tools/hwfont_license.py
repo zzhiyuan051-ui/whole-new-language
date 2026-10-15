@@ -26,13 +26,13 @@ Unicode Consortium 的《Font Submission Policy》明确要求字体文件里**�
 用法
 ----
     # 预览将要写入什么，不改文件
-    python huiwen/tools/hwfont_license.py --dry-run
+    python tools/hwfont_license.py --dry-run
 
     # 真的打补丁（会先备份成 GalHuiwen.ttf.bak）
-    python huiwen/tools/hwfont_license.py
+    python tools/hwfont_license.py
 
     # 指定其他字体文件
-    python huiwen/tools/hwfont_license.py --font path/to/x.ttf
+    python tools/hwfont_license.py --font path/to/x.ttf
 """
 from __future__ import annotations
 

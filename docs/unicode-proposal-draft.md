@@ -104,7 +104,7 @@ Windows TSF 输入法与真字体。
 | 字形空间余量 | 65,536 | `spec/01-script.md` |
 | 覆盖率 | 44 个语义类中，**20 类**有已定义字符；**24 类**仅有备用字 | `characters.tsv` |
 
-> 复算命令：`python huiwen/tools/char_audit.py` 与 `python huiwen/tools/codepoint_table.py`
+> 复算命令：`python tools/char_audit.py` 与 `python tools/codepoint_table.py`
 
 ### 3.5 【待补】现代来源引用
 
@@ -209,7 +209,7 @@ Unicode 官方 FAQ 对私用区的定义是：
 | `Word_Break` | 需专门定义 | **【待补】洄文是图上语法，「词」的切分规则必须写清楚** |
 
 可复算的逐字符属性表生成脚本：**【待补】**（模板可直接由
-`huiwen/tools/codepoint_table.py` 的产出改写）。
+`tools/codepoint_table.py` 的产出改写）。
 
 ---
 

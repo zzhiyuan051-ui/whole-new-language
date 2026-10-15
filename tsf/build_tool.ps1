@@ -1,7 +1,7 @@
 ﻿# 编译 TSF 诊断工具 hwimetool.exe
 #
 # 用法（仓库根目录）：
-#     powershell -NoProfile -ExecutionPolicy Bypass -File huiwen/tsf/build_tool.ps1
+#     powershell -NoProfile -ExecutionPolicy Bypass -File tsf/build_tool.ps1
 
 $ErrorActionPreference = 'Stop'
 
